@@ -99,14 +99,16 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" className={`${inter.variable} ${playfair.variable} ${fraunces.variable} ${cormorant.variable} ${ibmPlexMono.variable}`}>
-            <body className="font-sans bg-background text-primary min-h-screen flex flex-col overflow-x-hidden">
-                <Header />
-                <div className="flex-grow pt-0 pb-20 lg:pb-0 overflow-x-hidden"> {/* Add padding for sticky CTA on mobile */}
-                    {children}
+        <html lang="en" className={`${inter.variable} ${playfair.variable} ${fraunces.variable} ${cormorant.variable} ${ibmPlexMono.variable} overflow-x-hidden`}>
+            <body className="font-sans bg-background text-primary min-h-screen flex flex-col overflow-x-hidden w-full relative">
+                <div className="flex flex-col min-h-screen w-full relative overflow-x-hidden">
+                    <Header />
+                    <div className="flex-grow pt-0 pb-20 lg:pb-0"> {/* Add padding for sticky CTA on mobile */}
+                        {children}
+                    </div>
+                    <MobileStickyCTA />
+                    <Footer />
                 </div>
-                <MobileStickyCTA />
-                <Footer />
                 <JsonLd />
             </body>
         </html>
