@@ -34,7 +34,7 @@ export default function ContactPage() {
                                     <div className="h-10 w-10 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center mr-4 group-hover:border-[#C8B08A]/50 transition-colors">
                                         <Mail className="h-5 w-5 text-[#C8B08A]" />
                                     </div>
-                                    <span className="text-lg">postmebooth@gmail.com</span>
+                                    <span className="text-lg">booking@postmebooth.online</span>
                                 </div>
                                 <div className="flex items-center text-[#B8B8B8] group">
                                     <div className="h-10 w-10 rounded-full bg-[#141414] border border-white/5 flex items-center justify-center mr-4 group-hover:border-[#C8B08A]/50 transition-colors">

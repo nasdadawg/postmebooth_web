@@ -19,6 +19,9 @@ export function MobileStickyCTA() {
                     Secure a Date
                 </Button>
             </Link>
+            <p className="text-center text-[9px] mt-1.5 uppercase font-mono tracking-widest text-secondary/60">
+                Minimum Investment: $1,200
+            </p>
         </div>
     )
 }

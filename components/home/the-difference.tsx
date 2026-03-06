@@ -16,7 +16,7 @@ const PILLARS = [
     },
     {
         num: "03",
-        title: "Brand safe overlays",
+        title: "Bespoke Digital Framing",
         desc: "Clean frames when you want them. Nothing cheesy. Nothing off brand.",
     },
     {

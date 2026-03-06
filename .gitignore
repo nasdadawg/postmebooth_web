@@ -43,7 +43,7 @@ FULL_CODEBASE.md
 # large asset archives (not needed for deployment)
 /postmebooth_website_archive
 /_stitch_import
-trustedby_logos.png
+/trustedby_logos.png
 
 # agent config
 /.agent

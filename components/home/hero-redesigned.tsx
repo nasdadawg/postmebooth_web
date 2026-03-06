@@ -368,7 +368,7 @@ export function HeroRedesigned() {
                         Full frame portraits and instant delivery. Guests repost. You get a private, organized archive after.
                         <br /><br />
                         <span style={{ color: "rgba(212,196,168,0.78)" }}>
-                            SMS or email delivery · Private gallery · Brand safe overlays
+                            SMS or email delivery · Private gallery · Bespoke Digital Framing
                         </span>
                     </motion.p>
 
@@ -459,7 +459,7 @@ export function HeroRedesigned() {
                                 color: "rgba(242,239,233,0.45)",
                             }}
                         >
-                            Inquiry required. Confirmation within 24 hours.
+                            Minimum Investment: $1,200 · Inquiry required.
                         </p>
                     </motion.div>
 

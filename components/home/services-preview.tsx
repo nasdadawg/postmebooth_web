@@ -141,14 +141,14 @@ export function ServicesPreview() {
                     })}
                 </div>
 
-                {/* Mobile fallback — simple portrait cards */}
-                <div className="mt-8 block lg:hidden space-y-4">
+                {/* Mobile fallback — horizontal scroll cards */}
+                <div className="mt-8 flex lg:hidden gap-4 overflow-x-auto snap-x snap-mandatory pb-4 hide-scrollbar">
                     {services.map((svc) => (
                         <Link
                             key={svc.id}
                             href={svc.href}
-                            className="group relative block overflow-hidden"
-                            style={{ height: "240px" }}
+                            className="group relative flex-none w-[85vw] sm:w-[60vw] snap-center overflow-hidden"
+                            style={{ height: "400px" }}
                         >
                             <img
                                 src={svc.image}
