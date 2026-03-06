@@ -449,7 +449,7 @@ export function HeroRedesigned() {
 
                         {/* Sub-label under button */}
                         <p
-                            className="mt-6 md:mt-[18px]"
+                            className="mt-6 md:mt-[18px] hidden md:block"
                             style={{
                                 fontFamily: "var(--font-mono)",
                                 fontSize: "10px", /* Reduced font size to 10px on mobile */
