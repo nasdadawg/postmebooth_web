@@ -92,9 +92,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={`${inter.variable} ${playfair.variable} ${fraunces.variable} ${cormorant.variable} ${ibmPlexMono.variable}`}>
-            <body className="font-sans bg-background text-primary min-h-screen flex flex-col">
+            <body className="font-sans bg-background text-primary min-h-screen flex flex-col overflow-x-hidden">
                 <Header />
-                <div className="flex-grow pt-0 pb-20 lg:pb-0"> {/* Add padding for sticky CTA on mobile */}
+                <div className="flex-grow pt-0 pb-20 lg:pb-0 overflow-x-hidden"> {/* Add padding for sticky CTA on mobile */}
                     {children}
                 </div>
                 <MobileStickyCTA />
