@@ -181,7 +181,7 @@ export default function WeddingsPage() {
             </section>
 
             {/* SECTION 5: FAQ (Wedding Specific) */}
-            <section className="py-24 px-6 border-b border-white/5">
+            <section className="py-24 px-4 sm:px-6 border-b border-white/5">
                 <div ref={faqRef} className="max-w-3xl mx-auto">
                     <motion.h2
                         className="text-center font-mono text-[10px] uppercase tracking-[0.2em] text-[#C5A059] mb-12"

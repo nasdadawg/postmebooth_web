@@ -129,7 +129,7 @@ export function Header() {
                                             key={item.name}
                                             href={item.href}
                                             className={cn(
-                                                "-mx-3 block px-3 py-3 text-base font-medium leading-7 hover:bg-white/5 transition-colors tracking-wide",
+                                                "-mx-3 block px-3 py-4 text-lg font-medium leading-7 hover:bg-white/5 transition-colors tracking-wide",
                                                 pathname === item.href ? "text-accent" : "text-white"
                                             )}
                                             onClick={() => setMobileMenuOpen(false)}

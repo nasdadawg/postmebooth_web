@@ -127,10 +127,10 @@ export default function CorporatePage() {
             </section>
 
             {/* SECTION 2: What You Get (6 Grid) */}
-            <section className="py-24 px-6 border-b border-white/5">
+            <section className="py-24 px-4 sm:px-6 border-b border-white/5">
                 <div ref={gridRef} className="max-w-7xl mx-auto">
                     <motion.h2
-                        className="text-3xl font-serif text-[#F2EFE9] mb-12 text-center lg:text-left"
+                        className="text-[clamp(28px,4vw,36px)] font-serif text-[#F2EFE9] mb-12 text-center lg:text-left leading-tight"
                         initial={{ opacity: 0, y: 24 }}
                         animate={gridInView ? { opacity: 1, y: 0 } : {}}
                         transition={SPRING}
@@ -220,10 +220,10 @@ export default function CorporatePage() {
             </section>
 
             {/* SECTION 5: FAQ */}
-            <section className="py-24 px-6 border-b border-white/5">
+            <section className="py-24 px-4 sm:px-6 border-b border-white/5">
                 <div ref={faqRef} className="max-w-3xl mx-auto">
                     <motion.h2
-                        className="text-3xl font-serif text-[#F2EFE9] mb-12 text-center"
+                        className="text-[clamp(28px,4vw,36px)] font-serif text-[#F2EFE9] mb-12 text-center leading-tight"
                         initial={{ opacity: 0, y: 20 }}
                         animate={faqInView ? { opacity: 1, y: 0 } : {}}
                         transition={SPRING}

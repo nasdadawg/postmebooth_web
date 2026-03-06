@@ -312,7 +312,7 @@ export function HeroRedesigned() {
                         style={{
                             fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
                             fontWeight: 300,
-                            fontSize: "clamp(48px, 7.5vw, 128px)",
+                            fontSize: "clamp(36px, 10vw, 128px)", /* Reduced minimum size from 48px to 36px for mobile */
                             lineHeight: 0.92,
                             letterSpacing: "-0.04em",
                             color: "#F2EFE9",
@@ -449,10 +449,10 @@ export function HeroRedesigned() {
 
                         {/* Sub-label under button */}
                         <p
+                            className="mt-6 md:mt-[18px]"
                             style={{
-                                marginTop: "18px",
                                 fontFamily: "var(--font-mono)",
-                                fontSize: "11px",
+                                fontSize: "10px", /* Reduced font size to 10px on mobile */
                                 fontWeight: 500,
                                 letterSpacing: "0.14em",
                                 textTransform: "uppercase",

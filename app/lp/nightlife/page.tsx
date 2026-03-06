@@ -70,12 +70,12 @@ export default function NightlifePage() {
                     </motion.p>
 
                     <motion.h1
-                        className="max-w-4xl mb-12 text-center text-balance font-serif font-light text-[clamp(48px,8vw,110px)] leading-[0.9] tracking-tight text-[#F2EFE9]"
+                        className="max-w-4xl mb-12 text-center text-balance font-serif font-light text-[clamp(42px,8vw,110px)] leading-[0.9] tracking-tight text-[#F2EFE9]"
                         initial={{ opacity: 0, y: 32 }}
                         animate={heroInView ? { opacity: 1, y: 0 } : {}}
                         transition={{ ...SPRING, delay: 0.08 }}
                     >
-                        Built for the <br /><span className="text-[#C5A059] italic pr-2">Fast Room.</span>
+                        Built for the <br className="sm:hidden" /><span className="text-[#C5A059] italic pr-2">Fast Room.</span>
                     </motion.h1>
 
                     {/* Visual Stack (3 cascading portrait mockups) */}
@@ -213,10 +213,10 @@ export default function NightlifePage() {
             />
 
             {/* SECTION 5: FAQ (Nightlife Specific) */}
-            <section className="py-24 px-6 border-b border-white/5">
+            <section className="py-24 px-4 sm:px-6 border-b border-white/5">
                 <div ref={faqRef} className="max-w-3xl mx-auto">
                     <motion.h2
-                        className="text-3xl font-serif text-[#F2EFE9] mb-12 text-center"
+                        className="text-[clamp(28px,4vw,36px)] font-serif text-[#F2EFE9] mb-12 text-center leading-tight"
                         initial={{ opacity: 0, y: 20 }}
                         animate={faqInView ? { opacity: 1, y: 0 } : {}}
                         transition={SPRING}

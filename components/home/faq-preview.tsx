@@ -36,7 +36,7 @@ const FAQS = [
 
 export function FaqPreview() {
     return (
-        <section className="bg-[#050505] py-16 md:py-24 px-6 lg:px-8 border-t border-white/5" id="faq">
+        <section className="bg-[#050505] py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-white/5" id="faq">
             <div className="mx-auto max-w-7xl grid lg:grid-cols-3 gap-12 lg:gap-24">
                 {/* Header Column */}
                 <div>
