@@ -92,6 +92,7 @@ import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
 import { MobileStickyCTA } from "@/components/layout/mobile-sticky-cta"
 import JsonLd from "@/components/json-ld"
+import { Analytics } from '@vercel/analytics/next'
 
 export default function RootLayout({
     children,
@@ -110,6 +111,7 @@ export default function RootLayout({
                     <Footer />
                 </div>
                 <JsonLd />
+                <Analytics />
             </body>
         </html>
     )
