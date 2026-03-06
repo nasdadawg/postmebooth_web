@@ -6,7 +6,7 @@ export default function JsonLd() {
         "name": "PostMeBooth",
         "image": "https://postmebooth.com/og-image.jpg",
         "description": "Premium photo booth rental for Los Angeles corporate events, weddings, and nightlife. Sony a7IV studio-quality photography and instant sharing.",
-        "email": "booking@postmebooth.online",
+        "email": "postmebooth@gmail.com",
         "url": "https://postmebooth.com",
         "priceRange": "$$$",
         "address": {

@@ -57,11 +57,11 @@ export function Footer() {
                     <div>
                         <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-6">Connect</h3>
                         <div className="flex flex-col gap-4">
-                            <a href="mailto:booking@postmebooth.online" className="flex items-center gap-3 text-sm text-secondary hover:text-primary transition-colors group">
+                            <a href="mailto:postmebooth@gmail.com" className="flex items-center gap-3 text-sm text-secondary hover:text-primary transition-colors group">
                                 <div className="h-9 w-9 rounded-full bg-surface border border-white/5 flex items-center justify-center group-hover:border-accent/30 transition-colors">
                                     <Mail className="h-4 w-4 text-accent" />
                                 </div>
-                                booking@postmebooth.online
+                                postmebooth@gmail.com
                             </a>
                             <a href="https://instagram.com/postmebooth" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-secondary hover:text-primary transition-colors group">
                                 <div className="h-9 w-9 rounded-full bg-surface border border-white/5 flex items-center justify-center group-hover:border-accent/30 transition-colors">
