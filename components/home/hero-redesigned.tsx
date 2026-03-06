@@ -320,7 +320,7 @@ export function HeroRedesigned() {
                         }}
                     >
                         {/* Line 1 */}
-                        <span className="block" style={{ whiteSpace: "nowrap" }}>
+                        <span className="block pr-2">
                             <BlurText
                                 text="THE LOOK."
                                 delay={35}
@@ -330,7 +330,7 @@ export function HeroRedesigned() {
                             />
                         </span>
                         {/* Line 2 */}
-                        <span className="block" style={{ whiteSpace: "nowrap" }}>
+                        <span className="block pr-2">
                             <BlurText
                                 text="THE ROOM."
                                 delay={45}
@@ -340,7 +340,7 @@ export function HeroRedesigned() {
                             />
                         </span>
                         {/* Line 3 — gold italic */}
-                        <span className="block" style={{ whiteSpace: "nowrap" }}>
+                        <span className="block pr-2">
                             <BlurText
                                 text="CAPTURED CLEAN."
                                 delay={55}

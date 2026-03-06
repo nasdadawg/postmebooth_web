@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter, Playfair_Display, Fraunces, Cormorant_Garamond, IBM_Plex_Mono } from 'next/font/google'
 import './globals.css'
 
@@ -35,6 +35,14 @@ const ibmPlexMono = IBM_Plex_Mono({
     display: 'swap',
     weight: ['400', '500'],
 })
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+    themeColor: '#050505',
+}
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://postmebooth.com'),
