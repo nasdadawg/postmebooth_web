@@ -447,20 +447,7 @@ export function HeroRedesigned() {
                             </Link>
                         </div>
 
-                        {/* Sub-label under button */}
-                        <p
-                            className="mt-6 md:mt-[18px] hidden md:block"
-                            style={{
-                                fontFamily: "var(--font-mono)",
-                                fontSize: "10px", /* Reduced font size to 10px on mobile */
-                                fontWeight: 500,
-                                letterSpacing: "0.14em",
-                                textTransform: "uppercase",
-                                color: "rgba(242,239,233,0.45)",
-                            }}
-                        >
-                            Minimum Investment: $1,200 · Inquiry required.
-                        </p>
+                        {/* Sub-label under button removed per user request */}
                     </motion.div>
 
 
