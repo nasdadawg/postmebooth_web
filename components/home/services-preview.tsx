@@ -57,7 +57,7 @@ export function ServicesPreview() {
 
                 {/* ── Accordion Expansion Grid ── */}
                 <div
-                    className="flex gap-3 lg:gap-4"
+                    className="hidden lg:flex gap-3 lg:gap-4"
                     style={{ height: "min(70vh, 680px)" }}
                     onMouseLeave={() => setActiveId(null)}
                 >

@@ -84,7 +84,7 @@ export function PastEventsPreview() {
                 </motion.div>
 
                 {/* Portrait grid — 6 real event cards */}
-                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 lg:gap-4">
+                <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 gap-3 lg:gap-4">
                     {events.map((event, i) => (
                         <motion.div
                             key={event.id}
@@ -94,8 +94,7 @@ export function PastEventsPreview() {
                         >
                             <Link
                                 href={`/past-events/${event.id}`}
-                                className="group relative block overflow-hidden cursor-pointer"
-                                style={{ aspectRatio: "9 / 16" }}
+                                className="group relative block overflow-hidden cursor-pointer aspect-square xs:aspect-[9/16]"
                             >
                                 {/* Portrait image or video */}
                                 {isVideo(event.cover) ? (

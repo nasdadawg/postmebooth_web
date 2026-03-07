@@ -312,7 +312,7 @@ export function HeroRedesigned() {
                         style={{
                             fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
                             fontWeight: 300,
-                            fontSize: "clamp(36px, 10vw, 128px)", /* Reduced minimum size from 48px to 36px for mobile */
+                            fontSize: "clamp(12vw, 12vw, 128px)", /* Very aggressive scaling for mobile */
                             lineHeight: 0.92,
                             letterSpacing: "-0.04em",
                             color: "#F2EFE9",

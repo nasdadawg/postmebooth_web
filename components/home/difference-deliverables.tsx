@@ -103,7 +103,7 @@ export function DifferenceDeliverables() {
                     {/* ── Right Column: Deliverables ── */}
                     <div className="flex flex-col justify-center">
                         <FadeIn>
-                            <div className="border-l border-[#C5A059]/30 pl-10">
+                            <div className="border-l border-[#C5A059]/30 pl-6 lg:pl-10">
                                 <p className="text-xs uppercase tracking-[0.25em] text-accent font-semibold mb-6">
                                     What Guests Receive
                                 </p>
@@ -115,8 +115,8 @@ export function DifferenceDeliverables() {
                                     Powered by Booth.Events so sharing is automatic and the gallery stays clean long after your event.
                                 </p>
 
-                                {/* 2-column deliverables grid */}
-                                <div className="grid grid-cols-2 gap-x-8 gap-y-0">
+                                {/* 2-column on sm+, 1-column on mobile */}
+                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0">
                                     <div>
                                         {deliverablesLeft.map((item, i) => (
                                             <div key={item}>
