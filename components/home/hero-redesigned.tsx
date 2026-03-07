@@ -307,12 +307,11 @@ export function HeroRedesigned() {
                         FOR LOS ANGELES ROOMS THAT MATTER
                     </motion.p>
 
-                    {/* Massive headline — Cormorant 300 / -0.04em */}
                     <h1
+                        className="text-[clamp(3.5rem,10vw,4.5rem)] md:text-7xl lg:text-[5rem] xl:text-[6rem] 2xl:text-[7rem]"
                         style={{
                             fontFamily: "var(--font-cormorant), 'Cormorant Garamond', Georgia, serif",
                             fontWeight: 300,
-                            fontSize: "clamp(12vw, 12vw, 128px)", /* Very aggressive scaling for mobile */
                             lineHeight: 0.92,
                             letterSpacing: "-0.04em",
                             color: "#F2EFE9",
@@ -320,7 +319,7 @@ export function HeroRedesigned() {
                         }}
                     >
                         {/* Line 1 */}
-                        <span className="block pr-2">
+                        <span className="block pr-2 whitespace-nowrap">
                             <BlurText
                                 text="THE LOOK."
                                 delay={35}
@@ -330,7 +329,7 @@ export function HeroRedesigned() {
                             />
                         </span>
                         {/* Line 2 */}
-                        <span className="block pr-2">
+                        <span className="block pr-2 whitespace-nowrap">
                             <BlurText
                                 text="THE ROOM."
                                 delay={45}
@@ -340,7 +339,7 @@ export function HeroRedesigned() {
                             />
                         </span>
                         {/* Line 3 — gold italic */}
-                        <span className="block pr-2">
+                        <span className="block pr-2 whitespace-nowrap">
                             <BlurText
                                 text="CAPTURED CLEAN."
                                 delay={55}

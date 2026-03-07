@@ -57,7 +57,7 @@ export function ServicesPreview() {
 
                 {/* ── Accordion Expansion Grid ── */}
                 <div
-                    className="hidden lg:flex gap-3 lg:gap-4"
+                    className="hidden lg:flex gap-3 lg:gap-4 w-full"
                     style={{ height: "min(70vh, 680px)" }}
                     onMouseLeave={() => setActiveId(null)}
                 >
@@ -114,9 +114,6 @@ export function ServicesPreview() {
                                         transition: "clip-path 0.55s cubic-bezier(0.4, 0, 0.15, 1)",
                                     }}
                                 >
-                                    <p className="text-xs uppercase tracking-[0.25em] text-accent font-semibold mb-2">
-                                        Services
-                                    </p>
                                     <h3 className="font-display text-[clamp(1.8rem,3vw,2.6rem)] font-light text-white leading-tight mb-2">
                                         {svc.label}
                                     </h3>
