@@ -32,6 +32,10 @@ export function Header() {
         return () => window.removeEventListener("scroll", onScroll)
     }, [])
 
+    React.useEffect(() => {
+        setMobileMenuOpen(false)
+    }, [pathname])
+
     return (
         <header
             className={cn(
@@ -50,7 +54,7 @@ export function Header() {
                 <div className="flex lg:hidden">
                     <button
                         type="button"
-                        className="-m-2.5 inline-flex flex-col items-center justify-center p-4 gap-[5px] group z-50 transition-all duration-300"
+                        className="-m-2.5 inline-flex flex-col items-center justify-center p-4 gap-[5px] group z-[60] transition-all duration-300"
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                         <span className="sr-only">Open main menu</span>
@@ -123,8 +127,8 @@ export function Header() {
             {mobileMenuOpen && (
                 <div className="lg:hidden" role="dialog" aria-modal="true">
                     <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-md transition-opacity" onClick={() => setMobileMenuOpen(false)} />
-                    <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#080808] px-6 py-5 sm:max-w-sm border-l border-white/10 shadow-2xl safe-area-pb">
-                        <div className="flex items-center justify-between">
+                    <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#080808] px-6 py-5 sm:max-w-sm border-l border-white/10 shadow-2xl safe-area-pb flex flex-col">
+                        <div className="flex items-center justify-between mb-8">
                             <Logo asLink className="text-white" onClick={() => setMobileMenuOpen(false)} />
                             <button
                                 type="button"
@@ -137,7 +141,7 @@ export function Header() {
                                 <span className="block h-[1px] bg-white transition-all duration-300 ease-out w-6 -rotate-45 -translate-y-[6px]" />
                             </button>
                         </div>
-                        <div className="mt-10 flow-root">
+                        <div className="flex-1 flow-root">
                             <div className="-my-6 divide-y divide-white/10">
                                 <div className="space-y-6 py-8">
                                     <div className="space-y-4">
@@ -145,9 +149,9 @@ export function Header() {
                                             Services
                                         </p>
                                         <div className="flex flex-col gap-3 pl-3 border-l border-white/10 ml-1">
-                                            <Link href="/lp/corporate" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>Corporate</Link>
-                                            <Link href="/lp/nightlife" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>Nightlife</Link>
-                                            <Link href="/lp/weddings" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>Weddings</Link>
+                                            <Link href="/lp/corporate" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Corporate</Link>
+                                            <Link href="/lp/nightlife" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Nightlife</Link>
+                                            <Link href="/lp/weddings" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Weddings</Link>
                                         </div>
                                     </div>
                                     <div className="pt-4 space-y-4">
@@ -155,8 +159,8 @@ export function Header() {
                                             Explore
                                         </p>
                                         <div className="flex flex-col gap-4 pl-3 border-l border-white/10 ml-1">
-                                            <Link href="/past-events" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>Past Events Archive</Link>
-                                            <Link href="/faq" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+                                            <Link href="/past-events" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Past Events Archive</Link>
+                                            <Link href="/faq" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">FAQ</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -164,7 +168,6 @@ export function Header() {
                                     <Link
                                         href={HONEYBOOK_URL}
                                         target="_blank"
-                                        onClick={() => setMobileMenuOpen(false)}
                                     >
                                         <Button className="w-full h-14 bg-[#C5A059] text-black hover:bg-white hover:text-black transition-colors font-semibold tracking-widest text-xs uppercase shadow-[0_0_30px_rgba(197,160,89,0.15)]">
                                             Secure a Date
