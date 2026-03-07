@@ -47,22 +47,36 @@ export function Header() {
                 </div>
 
                 {/* Mobile menu button */}
-                {!isLandingPage && (
-                    <div className="flex lg:hidden">
-                        <button
-                            type="button"
-                            className="-m-2.5 inline-flex items-center justify-center p-2.5 text-secondary hover:text-white transition-colors"
-                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        >
-                            <span className="sr-only">Open main menu</span>
-                            {mobileMenuOpen ? (
-                                <X className="h-6 w-6" aria-hidden="true" />
-                            ) : (
-                                <Menu className="h-6 w-6" aria-hidden="true" />
+                <div className="flex lg:hidden">
+                    <button
+                        type="button"
+                        className="-m-2.5 inline-flex flex-col items-center justify-center p-4 gap-[5px] group z-50 transition-all duration-300"
+                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    >
+                        <span className="sr-only">Open main menu</span>
+                        {/* Top Line */}
+                        <span
+                            className={cn(
+                                "block h-[1px] bg-white transition-all duration-300 ease-out",
+                                mobileMenuOpen ? "w-6 rotate-45 translate-y-[6px]" : "w-6 group-hover:w-5"
                             )}
-                        </button>
-                    </div>
-                )}
+                        />
+                        {/* Middle Line */}
+                        <span
+                            className={cn(
+                                "block h-[1px] bg-white transition-all duration-300 ease-out",
+                                mobileMenuOpen ? "opacity-0 translate-x-4" : "w-4 opacity-100 group-hover:w-6"
+                            )}
+                        />
+                        {/* Bottom Line */}
+                        <span
+                            className={cn(
+                                "block h-[1px] bg-white transition-all duration-300 ease-out",
+                                mobileMenuOpen ? "w-6 -rotate-45 -translate-y-[6px]" : "w-5 group-hover:w-4"
+                            )}
+                        />
+                    </button>
+                </div>
 
                 {/* Desktop navigation */}
                 {!isLandingPage && (
@@ -106,45 +120,53 @@ export function Header() {
             </nav>
 
             {/* Mobile menu */}
-            {!isLandingPage && mobileMenuOpen && (
+            {mobileMenuOpen && (
                 <div className="lg:hidden" role="dialog" aria-modal="true">
-                    <div className="fixed inset-0 z-50 bg-background/95 backdrop-blur-sm" />
-                    <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-background px-6 py-6 sm:max-w-sm border-l border-white/10">
+                    <div className="fixed inset-0 z-40 bg-black/80 backdrop-blur-md transition-opacity" onClick={() => setMobileMenuOpen(false)} />
+                    <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#080808] px-6 py-5 sm:max-w-sm border-l border-white/10 shadow-2xl safe-area-pb">
                         <div className="flex items-center justify-between">
                             <Logo asLink className="text-white" onClick={() => setMobileMenuOpen(false)} />
                             <button
                                 type="button"
-                                className="-m-2.5 p-2.5 text-secondary hover:text-white transition-colors"
+                                className="-m-2.5 inline-flex flex-col items-center justify-center p-4 gap-[5px] group z-50 transition-all duration-300"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 <span className="sr-only">Close menu</span>
-                                <X className="h-6 w-6" aria-hidden="true" />
+                                <span className="block h-[1px] bg-white transition-all duration-300 ease-out w-6 rotate-45 translate-y-[6px]" />
+                                <span className="block h-[1px] bg-white transition-all duration-300 ease-out opacity-0 translate-x-4" />
+                                <span className="block h-[1px] bg-white transition-all duration-300 ease-out w-6 -rotate-45 -translate-y-[6px]" />
                             </button>
                         </div>
-                        <div className="mt-8 flow-root">
+                        <div className="mt-10 flow-root">
                             <div className="-my-6 divide-y divide-white/10">
-                                <div className="space-y-1 py-6">
-                                    {navigation.map((item) => (
-                                        <Link
-                                            key={item.name}
-                                            href={item.href}
-                                            className={cn(
-                                                "-mx-3 block px-3 py-4 text-lg font-medium leading-7 hover:bg-white/5 transition-colors tracking-wide",
-                                                pathname === item.href ? "text-accent" : "text-white"
-                                            )}
-                                            onClick={() => setMobileMenuOpen(false)}
-                                        >
-                                            {item.name}
-                                        </Link>
-                                    ))}
+                                <div className="space-y-6 py-8">
+                                    <div className="space-y-4">
+                                        <p className="text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-medium" style={{ fontFamily: "var(--font-mono)" }}>
+                                            Services
+                                        </p>
+                                        <div className="flex flex-col gap-3 pl-3 border-l border-white/10 ml-1">
+                                            <Link href="/lp/corporate" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>Corporate</Link>
+                                            <Link href="/lp/nightlife" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>Nightlife</Link>
+                                            <Link href="/lp/weddings" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>Weddings</Link>
+                                        </div>
+                                    </div>
+                                    <div className="pt-4 space-y-4">
+                                        <p className="text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-medium" style={{ fontFamily: "var(--font-mono)" }}>
+                                            Explore
+                                        </p>
+                                        <div className="flex flex-col gap-4 pl-3 border-l border-white/10 ml-1">
+                                            <Link href="/past-events" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>Past Events Archive</Link>
+                                            <Link href="/faq" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div className="py-6">
+                                <div className="py-8">
                                     <Link
                                         href={HONEYBOOK_URL}
                                         target="_blank"
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
-                                        <Button className="w-full bg-white text-black hover:bg-white/90 tracking-widest text-xs uppercase">
+                                        <Button className="w-full h-14 bg-[#C5A059] text-black hover:bg-white hover:text-black transition-colors font-semibold tracking-widest text-xs uppercase shadow-[0_0_30px_rgba(197,160,89,0.15)]">
                                             Secure a Date
                                         </Button>
                                     </Link>
