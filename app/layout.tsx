@@ -90,7 +90,6 @@ export const metadata: Metadata = {
 
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
-import { MobileStickyCTA } from "@/components/layout/mobile-sticky-cta"
 import JsonLd from "@/components/json-ld"
 
 export default function RootLayout({
@@ -103,10 +102,9 @@ export default function RootLayout({
             <body className="font-sans bg-background text-primary min-h-screen flex flex-col overflow-x-hidden w-full relative">
                 <div className="flex flex-col min-h-screen w-full relative overflow-x-hidden">
                     <Header />
-                    <div className="flex-grow pt-0 pb-20 lg:pb-0"> {/* Add padding for sticky CTA on mobile */}
+                    <div className="flex-grow pt-0">
                         {children}
                     </div>
-                    <MobileStickyCTA />
                     <Footer />
                 </div>
                 <JsonLd />
