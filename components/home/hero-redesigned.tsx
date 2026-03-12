@@ -30,7 +30,7 @@ export function HeroRedesigned() {
                     loop
                     muted
                     playsInline
-                    className="w-full h-full object-cover opacity-30 mix-blend-screen"
+                    className="w-full h-full object-cover opacity-35 filter contrast-125 saturate-100"
                 >
                     {/* Using one of the existing 9:16 MP4 recaps */}
                     <source src="/events/dsrpt-noiselab-episode4/gif/0397-NOIZE_LAB_004-d1.mp4" type="video/mp4" />
@@ -43,7 +43,10 @@ export function HeroRedesigned() {
                 {/* Text Content */}
                 <div className="flex flex-col w-full lg:w-[65%] pointer-events-auto">
 
-                    <h1 className="text-[3.5rem] leading-[0.9] lg:text-[7.5rem] font-serif mb-8 lg:mb-10 w-full flex flex-col">
+                    <h1
+                        className="leading-[0.9] font-serif mb-6 lg:mb-10 w-full flex flex-col"
+                        style={{ fontSize: "clamp(3rem, 10vw, 7.5rem)" }}
+                    >
                         <VariableProximity
                             label="THE LOOK. THE ROOM."
                             className="block cursor-default text-[#F2EFE9]"
@@ -53,10 +56,10 @@ export function HeroRedesigned() {
                             radius={200}
                             falloff="gaussian"
                         />
-                        <span className="block mt-2 italic text-[#D4C4A8]">CAPTURED CLEAN.</span>
+                        <span className="block mt-2 lg:mt-4 italic text-[#D4C4A8]">CAPTURED CLEAN.</span>
                     </h1>
 
-                    <p className="text-[16px] lg:text-[19px] font-light text-[#F2EFE9]/80 leading-relaxed max-w-md mb-10">
+                    <p className="text-[17px] lg:text-[20px] font-light text-[#F2EFE9]/90 leading-relaxed max-w-lg mb-10">
                         Studio-quality portraits + instant delivery for Los Angeles rooms that matter. Guests repost. You get the archive.
                     </p>
 

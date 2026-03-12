@@ -40,7 +40,10 @@ export function VibeStrip() {
                     transition={{ duration: 0.6 }}
                     className="font-mono text-[11px] lg:text-[12px] font-semibold tracking-[0.2em] text-[#D4C4A8] uppercase flex items-center gap-3"
                 >
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span>
+                    <span className="relative flex h-2 w-2 flex-shrink-0">
+                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
+                        <span className="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+                    </span>
                     LIVE FROM THE ROOM
                 </motion.h2>
             </div>

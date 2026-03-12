@@ -35,10 +35,13 @@ export function ResidencyHero() {
                     Not A Vendor.
                 </p>
 
-                <h1 className="text-[3.5rem] leading-[0.9] lg:text-[7.5rem] font-serif text-[#F2EFE9] w-full max-w-5xl mx-auto">
+                <h1
+                    className="leading-[0.9] font-serif text-[#F2EFE9] w-full max-w-5xl mx-auto flex flex-col items-center"
+                    style={{ fontSize: "clamp(3rem, 10vw, 7.5rem)" }}
+                >
                     <VariableProximity
                         label="THE CONTENT ENGINE."
-                        className="block cursor-default justify-center"
+                        className="block cursor-default text-center"
                         fromFontVariationSettings="'wght' 300, 'opsz' 14"
                         toFontVariationSettings="'wght' 700, 'opsz' 14"
                         containerRef={containerRef}
