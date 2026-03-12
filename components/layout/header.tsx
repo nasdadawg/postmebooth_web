@@ -8,15 +8,8 @@ import { Button } from "@/components/ui/button"
 import { MagneticButton } from "@/components/ui/magnetic-button"
 import { Menu, X } from "lucide-react"
 import { Logo } from "@/components/logo"
-import { SnitchToast } from "@/components/ui/snitch-toast"
 
 const HONEYBOOK_URL = "https://postmebooth.hbportal.co/public/book-postmebooth/1-Inquiry_form"
-
-const navigation = [
-    { name: "Services", href: "/services" },
-    { name: "Past Events", href: "/past-events" },
-    { name: "FAQ", href: "/faq" },
-]
 
 export function Header() {
     const pathname = usePathname()
@@ -51,11 +44,6 @@ export function Header() {
                     )} />
                 </div>
 
-                {/* Snitch Toast added centrally here */}
-                <div className="hidden lg:block">
-                    <SnitchToast />
-                </div>
-
                 {/* Mobile menu button */}
                 <div className="flex lg:hidden">
                     <button
@@ -86,48 +74,19 @@ export function Header() {
                             )}
                         />
                     </button>
-
-                    {/* Mobile Toast variant */}
-                    <div className="lg:hidden">
-                        <SnitchToast />
-                    </div>
                 </div>
+                {/* Desktop navigation - REMOVED for minimalist aesthetic */}
+                <div className="hidden lg:flex" />
 
-                {/* Desktop navigation */}
-                {!isLandingPage && (
-                    <div className="hidden lg:flex lg:gap-x-10">
-                        {navigation.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className={cn(
-                                    "relative text-sm font-medium tracking-wide leading-6 transition-colors duration-300 group",
-                                    pathname === item.href ? "text-accent" : "text-secondary hover:text-white"
-                                )}
-                            >
-                                {item.name}
-                                {/* Sliding underline */}
-                                <span className={cn(
-                                    "absolute -bottom-0.5 left-0 h-px bg-gradient-to-r from-[#D4AF6A] to-[#B38B45]",
-                                    "transition-all duration-300 ease-out",
-                                    pathname === item.href
-                                        ? "w-full"
-                                        : "w-0 group-hover:w-full"
-                                )} />
-                            </Link>
-                        ))}
-                    </div>
-                )}
-
-                <div className={cn("flex flex-1 justify-end", showDesktopCTA ? (isLandingPage ? "flex" : "hidden lg:flex") : "hidden")}>
+                <div className={cn("flex flex-1 justify-end", showDesktopCTA ? (isLandingPage ? "flex" : "hidden lg:flex") : "hidden lg:flex")}>
                     <MagneticButton strength={0.25} radius={80}>
                         <Link href={HONEYBOOK_URL} target="_blank">
                             <Button
                                 size="sm"
                                 variant="outline"
-                                className="border-white/15 text-[#F5F5F5] hover:bg-white/5 hover:text-[#C5A059] hover:border-white/25 transition-all duration-300 font-medium tracking-widest text-xs uppercase"
+                                className="border-white/15 text-[#F5F5F5] hover:bg-white hover:text-[#050505] transition-all duration-300 font-bold tracking-[0.16em] text-[11px] uppercase"
                             >
-                                Secure a Date
+                                Inquire
                             </Button>
                         </Link>
                     </MagneticButton>
@@ -157,7 +116,7 @@ export function Header() {
                                 <div className="space-y-6 py-8">
                                     <div className="space-y-4">
                                         <p className="text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-medium" style={{ fontFamily: "var(--font-mono)" }}>
-                                            Services
+                                            Activations
                                         </p>
                                         <div className="flex flex-col gap-3 pl-3 border-l border-white/10 ml-1">
                                             <Link href="/lp/corporate" className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Corporate</Link>
@@ -180,8 +139,8 @@ export function Header() {
                                         href={HONEYBOOK_URL}
                                         target="_blank"
                                     >
-                                        <Button className="w-full h-14 bg-[#C5A059] text-black hover:bg-white hover:text-black transition-colors font-semibold tracking-widest text-xs uppercase shadow-[0_0_30px_rgba(197,160,89,0.15)]">
-                                            Secure a Date
+                                        <Button className="w-full h-14 bg-[#D4C4A8] text-[#050505] hover:bg-white transition-colors font-bold tracking-[0.16em] text-[11px] uppercase shadow-[0_0_30px_rgba(212,196,168,0.15)]">
+                                            Inquire
                                         </Button>
                                     </Link>
                                 </div>

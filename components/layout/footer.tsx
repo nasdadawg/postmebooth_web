@@ -57,11 +57,14 @@ export function Footer() {
                     <div>
                         <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-accent mb-6">Connect</h3>
                         <div className="flex flex-col gap-4">
-                            <a href="mailto:postmebooth@gmail.com" className="flex items-center gap-3 text-sm text-secondary hover:text-primary transition-colors group">
-                                <div className="h-9 w-9 rounded-full bg-surface border border-white/5 flex items-center justify-center group-hover:border-accent/30 transition-colors">
-                                    <Mail className="h-4 w-4 text-accent" />
+                            <a href="mailto:hello@postmebooth.online" className="flex items-center gap-3 text-sm text-secondary hover:text-primary transition-colors group">
+                                <div className="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-white/10 transition-colors">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                                    </svg>
                                 </div>
-                                postmebooth@gmail.com
+                                hello@postmebooth.online
                             </a>
                             <a href="https://instagram.com/postmebooth" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-secondary hover:text-primary transition-colors group">
                                 <div className="h-9 w-9 rounded-full bg-surface border border-white/5 flex items-center justify-center group-hover:border-accent/30 transition-colors">

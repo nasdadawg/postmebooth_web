@@ -1,9 +1,10 @@
 import { HeroRedesigned } from "@/components/home/hero-redesigned"
 import { TrustedBy } from "@/components/home/trusted-by"
 import { TheDifference } from "@/components/home/the-difference"
-import { ServicesPreview } from "@/components/home/services-preview"
+import { ResidencyPreview } from "@/components/home/residency-preview"
 import { PastEventsPreview } from "@/components/home/past-events-preview"
 import { FaqPreview } from "@/components/home/faq-preview"
+import { VibeStrip } from "@/components/home/vibe-strip"
 import { HairlineDivider } from "@/components/ui/hairline-divider"
 import { Metadata } from 'next'
 
@@ -45,6 +46,9 @@ export default function Home() {
             {/* A: HERO */}
             <HeroRedesigned />
 
+            {/* A.5: VIBE STRIP */}
+            <VibeStrip />
+
             {/* B: TRUSTED BY */}
             <TrustedBy />
 
@@ -55,8 +59,8 @@ export default function Home() {
 
             <Divider />
 
-            {/* E: SERVICES PREVIEW */}
-            <ServicesPreview />
+            {/* E: RESIDENCY RETAINER */}
+            <ResidencyPreview />
 
             <Divider />
 

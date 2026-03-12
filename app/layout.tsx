@@ -90,6 +90,7 @@ export const metadata: Metadata = {
 
 import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { SnitchToast } from "@/components/ui/snitch-toast"
 import JsonLd from "@/components/json-ld"
 
 export default function RootLayout({
@@ -107,6 +108,7 @@ export default function RootLayout({
                     </div>
                     <Footer />
                 </div>
+                <SnitchToast />
                 <JsonLd />
             </body>
         </html>
