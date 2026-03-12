@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { MagneticButton } from "@/components/ui/magnetic-button"
 import { Menu, X } from "lucide-react"
 import { Logo } from "@/components/logo"
+import { SnitchToast } from "@/components/ui/snitch-toast"
 
 const HONEYBOOK_URL = "https://postmebooth.hbportal.co/public/book-postmebooth/1-Inquiry_form"
 
@@ -42,12 +43,17 @@ export function Header() {
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-500 glass-nav"
             )}
         >
-            <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8" aria-label="Global">
+            <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8 relative" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Logo asLink className={cn(
                         "transition-colors duration-300",
                         scrolled ? "text-white hover:text-accent" : "text-white hover:text-accent"
                     )} />
+                </div>
+
+                {/* Snitch Toast added centrally here */}
+                <div className="hidden lg:block">
+                    <SnitchToast />
                 </div>
 
                 {/* Mobile menu button */}
@@ -80,6 +86,11 @@ export function Header() {
                             )}
                         />
                     </button>
+
+                    {/* Mobile Toast variant */}
+                    <div className="lg:hidden">
+                        <SnitchToast />
+                    </div>
                 </div>
 
                 {/* Desktop navigation */}
