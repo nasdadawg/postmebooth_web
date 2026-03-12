@@ -43,71 +43,73 @@ export function Header() {
     }, [mobileMenuOpen])
 
     return (
-        <header
-            className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-500 glass-nav"
-            )}
-            style={{ pointerEvents: mobileMenuOpen ? "auto" : undefined }}
-        >
-            <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8 relative" aria-label="Global">
-                <div className="flex z-50 md:flex-1 relative">
-                    <Logo asLink className={cn(
-                        "transition-colors duration-300 relative z-50",
-                        scrolled ? "text-white hover:text-accent" : "text-white hover:text-accent"
-                    )} />
-                </div>
+        <>
+            <header
+                className={cn(
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-500 glass-nav"
+                )}
+                style={{ pointerEvents: mobileMenuOpen ? "auto" : undefined }}
+            >
+                <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8 relative" aria-label="Global">
+                    <div className="flex z-50 md:flex-1 relative">
+                        <Logo asLink className={cn(
+                            "transition-colors duration-300 relative z-50",
+                            scrolled ? "text-white hover:text-accent" : "text-white hover:text-accent"
+                        )} />
+                    </div>
 
-                {/* Mobile menu button */}
-                <div className="flex md:hidden relative z-50">
-                    <button
-                        type="button"
-                        className="-m-2.5 inline-flex flex-col items-center justify-center p-4 gap-[5px] group transition-all duration-300 pointer-events-auto"
-                        onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                        aria-expanded={mobileMenuOpen}
-                        aria-controls="mobile-menu"
-                        aria-label={mobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
-                    >
-                        <span className="sr-only">{mobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
-                        {/* Top Line */}
-                        <span
-                            className={cn(
-                                "block h-[1px] bg-white transition-all duration-300 ease-out",
-                                mobileMenuOpen ? "w-6 rotate-45 translate-y-[6px]" : "w-6 group-hover:w-5"
-                            )}
-                        />
-                        {/* Middle Line */}
-                        <span
-                            className={cn(
-                                "block h-[1px] bg-white transition-all duration-300 ease-out",
-                                mobileMenuOpen ? "opacity-0 translate-x-4" : "w-4 opacity-100 group-hover:w-6"
-                            )}
-                        />
-                        {/* Bottom Line */}
-                        <span
-                            className={cn(
-                                "block h-[1px] bg-white transition-all duration-300 ease-out",
-                                mobileMenuOpen ? "w-6 -rotate-45 -translate-y-[6px]" : "w-5 group-hover:w-4"
-                            )}
-                        />
-                    </button>
-                </div>
-                {/* Desktop navigation - REMOVED for minimalist aesthetic */}
-                <div className="hidden md:flex" />
+                    {/* Mobile menu button */}
+                    <div className="flex md:hidden relative z-[100]">
+                        <button
+                            type="button"
+                            className="-m-2.5 inline-flex flex-col items-center justify-center p-4 gap-[5px] group transition-all duration-300 pointer-events-auto cursor-pointer touch-manipulation relative z-[100]"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            aria-expanded={mobileMenuOpen}
+                            aria-controls="mobile-menu"
+                            aria-label={mobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
+                        >
+                            <span className="sr-only">{mobileMenuOpen ? "Close main menu" : "Open main menu"}</span>
+                            {/* Top Line */}
+                            <span
+                                className={cn(
+                                    "block h-[1px] bg-white transition-all duration-300 ease-out",
+                                    mobileMenuOpen ? "w-6 rotate-45 translate-y-[6px]" : "w-6 group-hover:w-5"
+                                )}
+                            />
+                            {/* Middle Line */}
+                            <span
+                                className={cn(
+                                    "block h-[1px] bg-white transition-all duration-300 ease-out",
+                                    mobileMenuOpen ? "opacity-0 translate-x-4" : "w-4 opacity-100 group-hover:w-6"
+                                )}
+                            />
+                            {/* Bottom Line */}
+                            <span
+                                className={cn(
+                                    "block h-[1px] bg-white transition-all duration-300 ease-out",
+                                    mobileMenuOpen ? "w-6 -rotate-45 -translate-y-[6px]" : "w-5 group-hover:w-4"
+                                )}
+                            />
+                        </button>
+                    </div>
+                    {/* Desktop navigation - REMOVED for minimalist aesthetic */}
+                    <div className="hidden md:flex" />
 
-                <div className={cn("flex flex-1 justify-end relative z-50", showDesktopCTA ? (isLandingPage ? "flex" : "hidden md:flex") : "hidden md:flex")}>
-                    <MagneticButton strength={0.25} radius={80}>
-                        <Link href={HONEYBOOK_URL} target="_blank">
-                            <Button
-                                size="sm"
-                                variant="outline"
-                                className="border-white/15 text-[#F5F5F5] hover:bg-white hover:text-[#050505] transition-all duration-300 font-bold tracking-[0.16em] text-[11px] uppercase pointer-events-auto"
-                            >
-                                Inquire
-                            </Button>
-                        </Link>
-                    </MagneticButton>
-                </div>
-            </nav>
+                    <div className={cn("flex flex-1 justify-end relative z-50", showDesktopCTA ? (isLandingPage ? "flex" : "hidden md:flex") : "hidden md:flex")}>
+                        <MagneticButton strength={0.25} radius={80}>
+                            <Link href={HONEYBOOK_URL} target="_blank">
+                                <Button
+                                    size="sm"
+                                    variant="outline"
+                                    className="border-white/15 text-[#F5F5F5] hover:bg-white hover:text-[#050505] transition-all duration-300 font-bold tracking-[0.16em] text-[11px] uppercase pointer-events-auto"
+                                >
+                                    Inquire
+                                </Button>
+                            </Link>
+                        </MagneticButton>
+                    </div>
+                </nav>
+            </header>
 
             {/* Mobile menu drawer */}
             {mobileMenuOpen && (
@@ -174,7 +176,7 @@ export function Header() {
                     </div>
                 </div>
             )}
-        </header>
+        </>
     )
 }
 
