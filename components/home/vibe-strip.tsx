@@ -13,15 +13,15 @@ const VIBE_ITEMS = [
     },
     {
         type: "image",
-        src: "/events/easports-battleflied6-friendsandfamily/front/0165-ripple_studios-d1-template.jpg",
-        label: "CORPORATE // EA SPORTS",
+        src: "/events/jstaparty-newyears/front/0045-nye-d1-template (1).jpg",
+        label: "NIGHTLIFE // NEW YEARS EVE",
         aspect: "aspect-[16/9]",
         width: "w-[400px] lg:w-[500px]"
     },
     {
         type: "video",
-        src: "/events/dsrpt-ericbellinger-cover-releaseparty/gif/0361-Eric_-_ep006-d1.mp4",
-        label: "WEDDING // PRIVATE ESTATE",
+        src: "/events/flair-runclub-eqinox-v2/front/0101-FLAIR_-d1.mp4",
+        label: "CORPORATE // EQUINOX RUN CLUB II",
         aspect: "aspect-[9/16]",
         width: "w-[280px] lg:w-[320px]"
     }
