@@ -18,13 +18,13 @@ const SERVICE_LANES = [
 const HERO_MEDIA = [
     {
         type: "image",
-        src: "/events/jstaparty-newyears/front/0045-nye-d1-template (1).jpg",
-        alt: "New Year's Eve"
+        src: "/events/la-maison-olivera/front/0013-Gabe_Oliveiras_25th_birthday-d1-template.jpg",
+        alt: "La Maison Olivera"
     },
     {
         type: "image",
-        src: "/events/la-maison-olivera/front/0013-Gabe_Oliveiras_25th_birthday-d1-template.jpg",
-        alt: "La Maison Olivera"
+        src: "/events/jstaparty-newyears/front/0045-nye-d1-template (1).jpg",
+        alt: "New Year's Eve"
     },
     {
         type: "video",
