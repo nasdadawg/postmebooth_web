@@ -1,8 +1,8 @@
 "use client"
 
 import Link from "next/link"
-import { useRef } from "react"
-import { motion, useInView } from "framer-motion"
+import { useRef, useState, useEffect } from "react"
+import { motion, useInView, AnimatePresence } from "framer-motion"
 import { VariableProximity } from "@/components/ui/variable-proximity"
 import { SpotlightCard } from "@/components/ui/spotlight-card"
 import { MagneticButton } from "@/components/ui/magnetic-button"
@@ -15,27 +15,71 @@ const SERVICE_LANES = [
     { title: "Corporate", desc: "Brand activations.", href: "/lp/corporate" },
 ]
 
+const HERO_MEDIA = [
+    {
+        type: "image",
+        src: "/events/jstaparty-newyears/front/0045-nye-d1-template (1).jpg",
+        alt: "New Year's Eve"
+    },
+    {
+        type: "image",
+        src: "/events/la-maison-olivera/front/0013-Gabe_Oliveiras_25th_birthday-d1-template.jpg",
+        alt: "La Maison Olivera"
+    },
+    {
+        type: "video",
+        src: "/events/flair-runclub-eqinox-v2/front/0101-FLAIR_-d1.mp4",
+        alt: "Equinox Run Club II"
+    }
+]
+
 export function HeroRedesigned() {
     const containerRef = useRef<HTMLDivElement>(null)
+    const [currentIndex, setCurrentIndex] = useState(0)
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % HERO_MEDIA.length)
+        }, 6000)
+        return () => clearInterval(timer)
+    }, [])
 
     return (
         <section
             ref={containerRef}
             className="relative w-full min-h-[100svh] flex flex-col justify-end lg:justify-center overflow-hidden bg-black"
         >
-            {/* 9:16 Video Background */}
-            <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    className="w-full h-full object-cover opacity-35 filter contrast-125 saturate-100"
-                >
-                    {/* Using one of the existing 9:16 MP4 recaps */}
-                    <source src="/events/dsrpt-noiselab-episode4/gif/0397-NOIZE_LAB_004-d1.mp4" type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/20" />
+            {/* Background Slideshow */}
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={currentIndex}
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 0.35, scale: 1 }}
+                        exit={{ opacity: 0, scale: 0.95 }}
+                        transition={{ duration: 1.5, ease: "easeInOut" }}
+                        className="absolute inset-0 flex items-center justify-center"
+                    >
+                        {HERO_MEDIA[currentIndex].type === "video" ? (
+                            <video
+                                autoPlay
+                                loop
+                                muted
+                                playsInline
+                                className="w-full h-full object-cover filter contrast-125 saturate-100"
+                            >
+                                <source src={HERO_MEDIA[currentIndex].src} type="video/mp4" />
+                            </video>
+                        ) : (
+                            <img
+                                src={HERO_MEDIA[currentIndex].src}
+                                alt={HERO_MEDIA[currentIndex].alt}
+                                className="w-full h-full object-cover filter contrast-125 saturate-100"
+                            />
+                        )}
+                    </motion.div>
+                </AnimatePresence>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/20 z-[2]" />
             </div>
 
             {/* Added a mobile-only text backing for legibility */}
