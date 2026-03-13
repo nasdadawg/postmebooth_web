@@ -5,9 +5,9 @@ import { motion, useInView } from "framer-motion"
 
 const VIBE_ITEMS = [
     {
-        type: "video",
-        src: "/events/dsrpt-noiselab-episode4/gif/0397-NOIZE_LAB_004-d1.mp4",
-        label: "NIGHTLIFE // SOFITEL LA",
+        type: "image",
+        src: "/events/la-maison-olivera/front/0013-Gabe_Oliveiras_25th_birthday-d1-template.jpg",
+        label: "NIGHTLIFE // LA MAISON OLIVERA",
         aspect: "aspect-[9/16]",
         width: "w-[280px] lg:w-[320px]"
     },
