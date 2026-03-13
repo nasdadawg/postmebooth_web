@@ -407,7 +407,7 @@ export const EVENTS: ArchiveEvent[] = [
     "venue": "Equinox",
     "city": null,
     "tags": [],
-    "featured": false,
+    "featured": true,
     "cover": "/events/flair-runclub-eqinox-v2/front/0101-FLAIR_-d1.mp4",
     "motion": [
       "/events/flair-runclub-eqinox-v2/gif/0010-FLAIR_-d1.mp4",
@@ -487,7 +487,7 @@ export const EVENTS: ArchiveEvent[] = [
     "venue": null,
     "city": null,
     "tags": [],
-    "featured": false,
+    "featured": true,
     "cover": "/events/la-maison-olivera/front/0013-Gabe_Oliveiras_25th_birthday-d1-template.jpg",
     "motion": [
       "/events/la-maison-olivera/gif/0004-Gabe_Oliveiras_25th_birthday-d1.mp4",
@@ -538,7 +538,7 @@ export const EVENTS: ArchiveEvent[] = [
     "venue": null,
     "city": null,
     "tags": [],
-    "featured": false,
+    "featured": true,
     "cover": "/events/jstaparty-newyears/front/0045-nye-d1-template (1).jpg",
     "motion": [
       "/events/jstaparty-newyears/gif/0003-nye-d1.mp4",
