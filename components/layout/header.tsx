@@ -122,12 +122,12 @@ export function Header() {
                     />
                     
                     {/* Drawer Content */}
-                    <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#080808] px-6 py-5 sm:max-w-sm border-l border-white/10 shadow-2xl safe-area-pb flex flex-col pointer-events-auto">
-                        <div className="flex items-center justify-between mb-8">
+                    <div className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#050505]/95 backdrop-blur-2xl px-6 py-5 sm:max-w-sm border-l border-white/10 shadow-2xl safe-area-pb flex flex-col pointer-events-auto">
+                        <div className="flex items-center justify-between mb-12">
                             <Logo asLink className="text-white relative z-50" onClick={() => setMobileMenuOpen(false)} />
                             <button
                                 type="button"
-                                className="-m-2.5 inline-flex flex-col items-center justify-center p-4 gap-[5px] group z-[60] transition-all duration-300 relative"
+                                className="-m-2.5 inline-flex flex-col items-center justify-center p-4 gap-[5px] group z-[60] transition-all duration-300 relative cursor-pointer touch-manipulation"
                                 onClick={() => setMobileMenuOpen(false)}
                                 aria-label="Close form"
                             >
@@ -138,36 +138,23 @@ export function Header() {
                             </button>
                         </div>
                         <div className="flex-1 flow-root">
-                            <div className="-my-6 divide-y divide-white/10">
-                                <div className="space-y-6 py-8">
-                                    <div className="space-y-4">
-                                        <p className="text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-medium" style={{ fontFamily: "var(--font-mono)" }}>
-                                            Activations
-                                        </p>
-                                        <div className="flex flex-col gap-3 pl-3 border-l border-white/10 ml-1">
-                                            <Link href="/lp/corporate" onClick={() => setMobileMenuOpen(false)} className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Corporate</Link>
-                                            <Link href="/lp/nightlife" onClick={() => setMobileMenuOpen(false)} className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Nightlife</Link>
-                                            <Link href="/lp/weddings" onClick={() => setMobileMenuOpen(false)} className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Weddings</Link>
-                                        </div>
-                                    </div>
-                                    <div className="pt-4 space-y-4">
-                                        <p className="text-[10px] uppercase tracking-[0.25em] text-[#C5A059] font-medium" style={{ fontFamily: "var(--font-mono)" }}>
-                                            Explore
-                                        </p>
-                                        <div className="flex flex-col gap-4 pl-3 border-l border-white/10 ml-1">
-                                            <Link href="/past-events" onClick={() => setMobileMenuOpen(false)} className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">Past Events Archive</Link>
-                                            <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="text-xl font-light tracking-wide text-white hover:text-[#C5A059] transition-colors block py-2">FAQ</Link>
-                                        </div>
+                            <div className="-my-6 flex flex-col h-full">
+                                <div className="space-y-4 py-8">
+                                    <div className="flex flex-col gap-2">
+                                        <Link href="/services" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-serif font-light text-white hover:text-[#C5A059] transition-colors block py-4">Services</Link>
+                                        <Link href="/past-events" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-serif font-light text-white hover:text-[#C5A059] transition-colors block py-4">Past Events</Link>
+                                        <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-serif font-light text-white hover:text-[#C5A059] transition-colors block py-4">FAQ</Link>
+                                        <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="text-4xl font-serif font-light text-white hover:text-[#C5A059] transition-colors block py-4">About</Link>
                                     </div>
                                 </div>
-                                <div className="py-8">
+                                <div className="py-12 mt-auto pb-safe">
                                     <Link
                                         href={HONEYBOOK_URL}
                                         target="_blank"
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
-                                        <Button className="w-full h-14 bg-[#D4C4A8] text-[#050505] hover:bg-white transition-colors font-bold tracking-[0.16em] text-[11px] uppercase shadow-[0_0_30px_rgba(212,196,168,0.15)]">
-                                            Inquire
+                                        <Button className="w-full h-16 bg-[#D4C4A8] text-[#050505] hover:bg-white transition-colors font-bold tracking-[0.18em] text-[12px] uppercase shadow-[0_0_30px_rgba(212,196,168,0.15)] rounded-full">
+                                            SECURE A DATE
                                         </Button>
                                     </Link>
                                 </div>
