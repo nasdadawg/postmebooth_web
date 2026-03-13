@@ -28,10 +28,10 @@ export function ValueProps() {
                 <div className="w-full lg:w-[40%] flex flex-col justify-center">
                     <h2 className="font-serif text-[4rem] lg:text-[5.5rem] leading-[0.9] text-[#F2EFE9] mb-8">
                         The End of <br />
-                        <span className="text-white/30 line-through">Rentals.</span>
+                        Rentals.
                     </h2>
                     <p className="text-[18px] font-light text-[#F2EFE9]/80 leading-relaxed max-w-md">
-                        The days of one-off $1,200 "party rentals" and chaotic photo booth generic prints are over. We are a digital-native content engine integrated into the DNA of your venue. At <span className="text-[#C5A059] font-medium">$5,000/mo</span>, you aren't paying for a booth, you are buying the highest-ROI marketing system on the floor.
+                        The days of chaotic photo booth generic prints are over. We are a digital-native content engine integrated into the DNA of your venue. At <span className="text-[#C5A059] font-medium">$5,000/mo</span>, you aren't paying for a booth, you are buying the highest-ROI marketing system on the floor.
                     </p>
                 </div>
 

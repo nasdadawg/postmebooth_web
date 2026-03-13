@@ -31,9 +31,10 @@ export function HeroRedesigned() {
                         loop
                         muted
                         playsInline
-                        className="w-full h-full object-cover filter contrast-125 saturate-100 opacity-35"
+                        className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.4]"
+                        poster="/events/jstaparty-newyears/front/0045-nye-d1-template (1).jpg"
                     >
-                        <source src="/events/la-maison-olivera/gif/0004-Gabe_Oliveiras_25th_birthday-d1.mp4" type="video/mp4" />
+                        <source src="/events/jstaparty-newyears/gif/0217-nye-d1.mp4" type="video/mp4" />
                     </video>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/20 z-[2]" />

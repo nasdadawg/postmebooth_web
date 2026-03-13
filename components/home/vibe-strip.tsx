@@ -5,23 +5,23 @@ import { motion, useInView } from "framer-motion"
 
 const VIBE_ITEMS = [
     {
-        type: "image",
-        src: "/events/la-maison-olivera/front/0013-Gabe_Oliveiras_25th_birthday-d1-template.jpg",
-        label: "NIGHTLIFE // LA MAISON OLIVERA",
+        type: "video",
+        src: "/events/spice-dayrave/gif/0015-Spice_-d1.mp4",
+        label: "NIGHTLIFE // SPICE DAY RAVE",
         aspect: "aspect-[9/16]",
         width: "w-[280px] lg:w-[320px]"
     },
     {
-        type: "image",
-        src: "/events/easports-battleflied6-friendsandfamily/front/0165-ripple_studios-d1-template.jpg",
-        label: "CORPORATE // EA SPORTS",
+        type: "video",
+        src: "/events/flair-runclub-eqinox-v2/front/0101-FLAIR_-d1.mp4",
+        label: "CORPORATE // EQUINOX",
         aspect: "aspect-[16/9]",
         width: "w-[400px] lg:w-[500px]"
     },
     {
         type: "video",
-        src: "/events/dsrpt-ericbellinger-cover-releaseparty/gif/0015-Eric_-_ep006-d1.mp4",
-        label: "NIGHTLIFE // ERIC BELLINGER",
+        src: "/events/wedding-jasmineandadrian-cityla/gif/0380-wedding_-d1.mp4",
+        label: "WEDDINGS // JASMINE + ADRIAN",
         aspect: "aspect-[9/16]",
         width: "w-[280px] lg:w-[320px]"
     }

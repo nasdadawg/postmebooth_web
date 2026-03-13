@@ -6,6 +6,7 @@ import { PastEventsPreview } from "@/components/home/past-events-preview"
 import { FaqPreview } from "@/components/home/faq-preview"
 import { VibeStrip } from "@/components/home/vibe-strip"
 import { HairlineDivider } from "@/components/ui/hairline-divider"
+import { FinalCta } from "@/components/home/final-cta"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -75,6 +76,7 @@ export default function Home() {
             <Divider />
 
             {/* H: FINAL CTA */}
+            <FinalCta />
         </main>
     )
 }
