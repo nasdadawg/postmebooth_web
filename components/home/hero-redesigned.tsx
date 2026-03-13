@@ -15,70 +15,27 @@ const SERVICE_LANES = [
     { title: "Corporate", desc: "Brand activations.", href: "/lp/corporate" },
 ]
 
-const HERO_MEDIA = [
-    {
-        type: "image",
-        src: "/events/la-maison-olivera/front/0013-Gabe_Oliveiras_25th_birthday-d1-template.jpg",
-        alt: "La Maison Olivera"
-    },
-    {
-        type: "image",
-        src: "/events/jstaparty-newyears/front/0045-nye-d1-template (1).jpg",
-        alt: "New Year's Eve"
-    },
-    {
-        type: "video",
-        src: "/events/flair-runclub-eqinox-v2/front/0101-FLAIR_-d1.mp4",
-        alt: "Equinox Run Club II"
-    }
-]
-
 export function HeroRedesigned() {
     const containerRef = useRef<HTMLDivElement>(null)
-    const [currentIndex, setCurrentIndex] = useState(0)
-
-    useEffect(() => {
-        const timer = setInterval(() => {
-            setCurrentIndex((prev) => (prev + 1) % HERO_MEDIA.length)
-        }, 6000)
-        return () => clearInterval(timer)
-    }, [])
 
     return (
         <section
             ref={containerRef}
             className="relative w-full min-h-[100svh] flex flex-col justify-end lg:justify-center overflow-hidden bg-black"
         >
-            {/* Background Slideshow */}
+            {/* Background Video */}
             <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={currentIndex}
-                        initial={{ opacity: 0, scale: 1.05 }}
-                        animate={{ opacity: 0.35, scale: 1 }}
-                        exit={{ opacity: 0, scale: 0.95 }}
-                        transition={{ duration: 1.5, ease: "easeInOut" }}
-                        className="absolute inset-0 flex items-center justify-center"
+                <div className="absolute inset-0 flex items-center justify-center">
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-cover filter contrast-125 saturate-100 opacity-35"
                     >
-                        {HERO_MEDIA[currentIndex].type === "video" ? (
-                            <video
-                                autoPlay
-                                loop
-                                muted
-                                playsInline
-                                className="w-full h-full object-cover filter contrast-125 saturate-100"
-                            >
-                                <source src={HERO_MEDIA[currentIndex].src} type="video/mp4" />
-                            </video>
-                        ) : (
-                            <img
-                                src={HERO_MEDIA[currentIndex].src}
-                                alt={HERO_MEDIA[currentIndex].alt}
-                                className="w-full h-full object-cover filter contrast-125 saturate-100"
-                            />
-                        )}
-                    </motion.div>
-                </AnimatePresence>
+                        <source src="/events/la-maison-olivera/gif/0004-Gabe_Oliveiras_25th_birthday-d1.mp4" type="video/mp4" />
+                    </video>
+                </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/20 z-[2]" />
             </div>
 
